@@ -1,4 +1,4 @@
 .idea
-db.sqllite3
+
 *.pyc
 __pycache__
