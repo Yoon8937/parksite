@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-
+import pymysql  
+pymysql.install_as_MySQLdb()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-#_r=9du2%sfr*^=v0_bn7-iitpf&(c+*6gsxzbg)l^!hfos5zt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['54.180.127.136']
 
 
 # Application definition
@@ -81,7 +82,7 @@ DATABASES = {
         'NAME': 'chc_test', #DB 이름
         'USER': 'chc_admin',  #계정 아이디
         'PASSWORD' : 'chc12345', # 계정 비밀번호
-        'HOST': 'chc-db3.cdqf0gxh6nhf.ap-northeast-2.rds.amazonaws.com', # DB 서버 호스트
+        'HOST': 'chc-db.cdqf0gxh6nhf.ap-northeast-2.rds.amazonaws.com', # DB 서버 호스트
         'PORT': '3306', # DB 서버 포트
 
     }
